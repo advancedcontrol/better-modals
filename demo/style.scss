@@ -1,0 +1,11 @@
+
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+@import "../better-modals.scss";
+@include better-modals();
+

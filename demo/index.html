@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Angular Modal Demo</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body ng-app="coUtils">
+
+        <div ng-init="scopeVar = 23">
+            <h1>Click to show</h1>
+            <button ng-click="do_show = true">a popup</button>
+
+            <modal title="Testing Modal" show="do_show">
+                <p>Testing that we are still in scope {{scopeVar}}</p>
+                <!-- Use an accessor method here -->
+                <button ng-click="$parent.$parent.do_show = false">Close</button>
+            </modal>
+        </div>
+
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="../better-modals.js"></script>
+    </body>
+</html>

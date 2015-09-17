@@ -1,0 +1,22 @@
+{
+  "name": "co-modals",
+  "main": [
+    "co-modals.js"
+  ],
+  "description": "Simple AngularJS modal directive for popups",
+  "dependencies": {
+    "angular": "1.x"
+  },
+  "devDependencies": {},
+  "homepage": "https://github.com/advancedcontrol/co-modals",
+  "version": "1.0.4",
+  "_release": "1.0.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.4",
+    "commit": "83b4186466b931286de6635226368f65b7b1d2bf"
+  },
+  "_source": "git://github.com/advancedcontrol/co-modals.git",
+  "_target": "*",
+  "_originalSource": "co-modals"
+}

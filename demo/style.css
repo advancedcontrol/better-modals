@@ -1,0 +1,127 @@
+/* line 3, style.scss */
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* line 23, ../better-modals.scss */
+div#modals > modal {
+  display: none;
+  background-color: transparent;
+  transition: background-color 0.4s;
+  -webkit-transition: background-color 0.4s;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+/* line 33, ../better-modals.scss */
+div#modals > modal > div > div {
+  display: none;
+}
+/* line 38, ../better-modals.scss */
+div#modals > modal.coModal-add {
+  display: table;
+}
+/* line 43, ../better-modals.scss */
+div#modals > modal.coModal {
+  display: table;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+/* line 49, ../better-modals.scss */
+div#modals > modal.coModal-remove {
+  display: table;
+}
+/* line 52, ../better-modals.scss */
+div#modals > modal.coModal-remove > div > div {
+  display: block;
+}
+/* line 58, ../better-modals.scss */
+div#modals > modal.coModal-remove-active {
+  background-color: transparent;
+}
+/* line 65, ../better-modals.scss */
+div#modals > modal.bounceInRight.coModal > div > div {
+  display: block;
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+/* line 78, ../better-modals.scss */
+div#modals > modal.bounceInRight.coModal-remove > div > div {
+  -webkit-animation-name: bounceOutRight;
+  animation-name: bounceOutRight;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+/* line 106, ../better-modals.scss */
+div#modals > modal > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 110, ../better-modals.scss */
+div#modals > modal > div > div {
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 118, ../better-modals.scss */
+  modal > div > div {
+    width: 300px !important;
+  }
+}
+/* line 123, ../better-modals.scss */
+modal > div > div {
+  position: relative;
+  background-color: white;
+  padding-bottom: 20px;
+  width: 500px;
+  border-radius: 4px;
+  color: black;
+}
+/* line 133, ../better-modals.scss */
+modal > div > div h1 {
+  background-color: #292d33;
+  color: white;
+  line-height: 20px;
+  font-weight: normal;
+  text-align: left;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin-bottom: 30px;
+}
+/* line 149, ../better-modals.scss */
+modal > div > div p {
+  padding: 0px 20px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 30px;
+}
+/* line 159, ../better-modals.scss */
+modal > div > div menu {
+  padding: 0px 20px;
+}
+/* line 163, ../better-modals.scss */
+modal > div > div menu a.cancel, modal > div > div menu button.cancel {
+  float: left;
+}
+/* line 167, ../better-modals.scss */
+modal > div > div menu a.ok, modal > div > div menu button.ok {
+  float: right;
+}
