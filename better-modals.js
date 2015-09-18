@@ -47,8 +47,11 @@
                         },
                         close = function () {
                             return $animate.removeClass(element, 'coModal').then(function () {
-                                element.detach();
-                                scope.show = scope.visible = false;
+                                // Scope may have been destroyed at this point
+                                if (element) {
+                                    element.detach();
+                                    scope.show = scope.visible = false;
+                                }
                             });
                         };
 
