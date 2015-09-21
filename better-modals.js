@@ -31,10 +31,10 @@
                 restrict: 'E',
                 transclude: true,
                 template:
-                    '<div ng-cloak ng-click="close($event)" ng-touch="close($event)">' +
-                        '<div ng-touch="$event.stopPropagation()">' +
+                    '<div ng-cloak ng-touch="close($event)">' +
+                        '<div>' +
                             '<div class="modal-header"><h1>{{title}}</h1>' +
-                                '<span ng-if="showClose" class="close" ng-click="close($event)" ng-touch="close($event)"></span>' +
+                                '<span ng-if="showClose" class="close" ng-touch="close($event)"></span>' +
                             '</div>' +
                             '<div class="modal-content" ng-transclude></div>' +
                         '</div>' +
