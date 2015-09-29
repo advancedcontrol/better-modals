@@ -31,10 +31,10 @@
                 restrict: 'E',
                 transclude: true,
                 template:
-                    '<div ng-cloak ng-touch="close($event)">' +
+                    '<div ng-cloak ng-touch="tryClose($event)">' +
                         '<div>' +
                             '<div class="modal-header"><h1>{{title}}</h1>' +
-                                '<span ng-if="showClose" class="close" ng-touch="close($event)"></span>' +
+                                '<span ng-if="showClose" role="button" class="close" ng-touch="close($event)"></span>' +
                             '</div>' +
                             '<div class="modal-content" ng-transclude></div>' +
                         '</div>' +
@@ -59,7 +59,12 @@
                     // Setup the element
                     scope.visible = false;
                     element.addClass(attrs.animation || 'bounceInRight');
-                    scope.showClose = !attrs.hasOwnProperty('noClose');
+
+                    
+                    scope.canClose = !attrs.hasOwnProperty('noClose');
+                    scope.showClose = scope.noClose;
+                    if (!scope.showClose)
+                        scope.showClose = attrs.noClose !== 'true';
 
                     // Watch to see if the modal should be showing or not
                     scope.$watch('show', function (showing) {
@@ -72,10 +77,13 @@
                     
                     // So the element can close itself
                     scope.close = function (e) {
-                        if (scope.showClose) {
-                            close();
-                            e.stopPropagation();
-                            e.preventDefault();
+                        close();
+                        e.stopPropagation();
+                    };
+
+                    scope.tryClose = function (e) {
+                        if (scope.canClose) {
+                            scope.close();
                         }
                     };
 
